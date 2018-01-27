@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/style.css">
+    <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
+    <script src = "https://cdn.jsdelivr.net/npm/moment@2.20.1/moment.min.js"></script>
+    
+</head>
+<body>
+    
+    <div class="container">
+        <div class="jumbotron" id="title">
+            <h1>ALL ABOARD!</h1>
+            <h3>A Simple Train Schedule</h3>
+        </div>
+        <div id="table">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <p>Train Schedule</p>
+                    <br>
+                    <th>Train Name</th>
+                    <th>Destination</th>
+                    <th>1st Train Time</th>
+                    <th>Frequency</th>
+                    <th>Minutes Away</th>
+                </tr>
+            </thead>
+                <tr>
+                    <td id="tnameTable"></td>
+                    <td id="tdestTable"></td>
+                    <td id="inputTable"></td>
+                    <td id="freqTable"></td>
+                    <td id="minTable"></td>
+                </tr>
+        </table>
+        </div>
+        <form id="form">
+            <p>Train Form</p>
+            <br>
+            <div class="form-group">
+                <label>Train Name</label>
+                <input type="text" class="form-control" id="tnameInput">
+            </div>
+            <div class="form-group">
+                <label>Destination</label>
+                <input type="text" class="form-control" id="tdestInput" placeholder="ex: Chicago">
+            </div>
+            <div class="form-group">
+                <label>First Train Time -- in military time</label>
+                <input type="text" class="form-control" id="inputInput" placeholder="22:15">
+            </div>
+            <div class="form-group">
+                <label>Frequency -- in minutes</label>
+                <input type="number" class="form-control" id="freqInput" placeholder="ex:10">
+            </div>
+            <button type="button" class="btn btn-primary" id="submit">Submit</button>
+        </form>   
+    </div>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="assets/logic.js"></script>
+
+</body>
+</html>
